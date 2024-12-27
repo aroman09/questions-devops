@@ -1,0 +1,1104 @@
+{
+    "questions": [
+        {
+            "question": "¿Cuáles son los tres aspectos de ALM?",
+            "options": [
+              "Gobierno, integración y despliegue.",
+              "Gobierno, desarrollo y operaciones. Estos tres aspectos forman parte del ciclo de ALM e intervienen en cada una de las fases, según corresponda.",
+              "SDLC, CICD y despliegue continuo.",
+              "Desarrollo y operaciones."
+            ],
+            "correct": "Gobierno, desarrollo y operaciones. Estos tres aspectos forman parte del ciclo de ALM e intervienen en cada una de las fases, según corresponda.",
+            "description": "Los tres aspectos mencionados son fundamentales para el ciclo de ALM, que abarca desde el gobierno hasta las operaciones, garantizando la correcta integración y entrega continua del software."
+        },
+        {
+            "question": "¿Qué significa construir, probar y desplegar automáticamente?",
+            "options": [
+              "Escribir unos scripts de bash para cada tarea.",
+              "Definir trabajos en Jenkins y ejecutarlos cada vez que hay un cambio.",
+              "Documentar cada paso del despliegue exhaustivamente.",
+              "Conseguir que los cambios de código inicien una construcción, ejecuten las pruebas y permitan un despliegue sin intervención humana."
+            ],
+            "correct": "Conseguir que los cambios de código inicien una construcción, ejecuten las pruebas y permitan un despliegue sin intervención humana.",
+            "description": "La automatización del proceso de construcción, prueba y despliegue asegura que los cambios de código se integren y desplieguen de manera continua sin intervención manual, lo que mejora la eficiencia y la calidad del desarrollo."
+        },
+        {
+            "question": "¿Por qué es útil desplegar un entorno de producción antes de que acabe el desarrollo?",
+            "options": [
+              "Para probar el proceso de despliegue antes de la fecha clave.",
+              "Para comprobar que el sistema funciona bien en este entorno, que puede ser y será diferente de los entornos de desarrollo.",
+              "Para aumentar la fiabilidad del proceso.",
+              "Todas las anteriores."
+            ],
+            "correct": "Todas las anteriores.",
+            "description": "Desplegar en un entorno similar a producción antes de finalizar el desarrollo permite validar el proceso de despliegue, garantizar el buen funcionamiento del sistema en un entorno realista y mejorar la fiabilidad del proceso de entrega continua."
+        },
+        {
+            "question": "¿Qué significa gestionar automáticamente la configuración?",
+            "options": [
+              "Mantener la configuración de cada entorno separada del script de despliegue y con un control de versiones.",
+              "Escribir scripts separados, uno por entorno, que no dependan de ningún otro fichero.",
+              "Guardar la configuración aplicada en cada entorno en una base de datos.",
+              "Ninguna de las anteriores."
+            ],
+            "correct": "Mantener la configuración de cada entorno separada del script de despliegue y con un control de versiones.",
+            "description": "Gestionar automáticamente la configuración implica mantener la configuración específica de cada entorno separada y bajo control de versiones, lo que permite un despliegue más fiable y consistente entre los diferentes entornos de desarrollo, pruebas y producción."
+        },
+        {
+            "question": "¿Cuál es el objetivo de la integración continua?",
+            "options": [
+              "Obligar a los desarrolladores a integrar cambios todos los días para controlar lo que hacen.",
+              "Implantar una herramienta moderna como Jenkins.",
+              "Aumentar la calidad del código detectando los errores lo más pronto posible y la velocidad a la que se entrega a los clientes.",
+              "Ninguna de las anteriores."
+            ],
+            "correct": "Aumentar la calidad del código detectando los errores lo más pronto posible y la velocidad a la que se entrega a los clientes.",
+            "description": "La integración continua busca mejorar la calidad del código y acelerar la entrega a los clientes, permitiendo detectar errores temprano en el proceso de desarrollo."
+        },
+        {
+            "question": "¿Cuál es el objetivo de la entrega continua?",
+            "options": [
+              "Aumentar la fiabilidad del código, reduciendo el número de errores.",
+              "Reducir el tiempo necesario para entregar software en producción.",
+              "Aumentar la fiabilidad de los procesos de despliegue.",
+              "Todas las anteriores."
+            ],
+            "correct": "Todas las anteriores.",
+            "description": "La entrega continua tiene como objetivo mejorar la fiabilidad del código, reducir el tiempo de entrega y garantizar procesos de despliegue consistentes, lo que permite entregar código de calidad de forma rápida y confiable."
+        },
+        {
+            "question": "¿Qué diferencia hay entre entrega y despliegue continuos?",
+            "options": [
+              "Ninguna, son sinónimos.",
+              "La entrega deja el producto listo para desplegar después de cada cambio, pero no tiene por qué desplegar en producción. El despliegue continuo prosigue el flujo de la entrega múltiples veces al día hasta completar el despliegue en producción.",
+              "La entrega solo compila el código, el despliegue, además, incorpora las pruebas.",
+              "Ninguna de las anteriores."
+            ],
+            "correct": "La entrega deja el producto listo para desplegar después de cada cambio, pero no tiene por qué desplegar en producción. El despliegue continuo prosigue el flujo de la entrega múltiples veces al día hasta completar el despliegue en producción.",
+            "description": "La entrega continua asegura que el producto esté listo para su despliegue, mientras que el despliegue continuo automatiza la implementación del código en producción de manera frecuente, garantizando que se mantenga actualizado en todo momento."
+        },
+        {
+            "question": "¿Qué se puede esperar de las construcciones de software en una organización que no ha empezado a madurar en la integración continua?",
+            "options": [
+              "El pase a producción es automático, fiable e indoloro.",
+              "Los cambios en la base de datos se ejecutan manualmente.",
+              "La construcción es manual y no se gestionan los artefactos.",
+              "No hay batería de pruebas alguna."
+            ],
+            "correct": "La construcción es manual y no se gestionan los artefactos.",
+            "description": "En una organización que aún no ha adoptado la integración continua, los procesos son manuales, desde la construcción del software hasta el despliegue y la gestión de bases de datos, lo que puede ocasionar ineficiencias y mayor riesgo de errores."
+        },
+        {
+            "question": "¿En qué debe centrar sus esfuerzos una organización que intenta mejorar su calidad de software?",
+            "options": [
+              "En aquellos aspectos del proceso de integración y entrega que sean más dolorosos.",
+              "En automatizar todo el proceso cuanto antes.",
+              "En desplegar la aplicación sobre Kubernetes.",
+              "En versionar todos los elementos de la configuración."
+            ],
+            "correct": "En aquellos aspectos del proceso de integración y entrega que sean más dolorosos.",
+            "description": "Una organización que busca mejorar su calidad de software debe centrarse primero en los aspectos más problemáticos y de alto riesgo en el proceso de integración y entrega, ya que son los que más valor pueden aportar cuando se mejoran."
+        },
+        {
+            "question": "¿Cuál de estos elementos es fundamental para empezar a aplicar integración continua?",
+            "options": [
+              "Un sistema de control de versiones.",
+              "Una batería de pruebas y automatización.",
+              "Aceptación del equipo.",
+              "Todos los anteriores."
+            ],
+            "correct": "Todos los anteriores.",
+            "description": "La integración continua requiere tanto de aspectos técnicos, como un sistema de control de versiones y automatización de pruebas, como de un compromiso y aceptación por parte del equipo para garantizar su correcta implementación."
+        },
+        {
+            "question": "¿En qué consiste un commit?",
+            "options": [
+              "Es el proceso de incluir un fichero en un sistema de control de cambios.",
+              "Es un conjunto de cambios registrados en la historia de un sistema de control de cambios.",
+              "Es una carpeta con los ficheros de una versión de la aplicación.",
+              "Es el cambio a un punto anterior de la historia del repositorio."
+            ],
+            "correct": "Es un conjunto de cambios registrados en la historia de un sistema de control de cambios.",
+            "description": "Un commit es un registro de los cambios realizados en los ficheros del proyecto, que se guarda en el historial del repositorio para su seguimiento y gestión a lo largo del tiempo."
+        },
+        {
+            "question": "¿Qué debería ser versionado?",
+            "options": [
+              "El código fuente de la aplicación.",
+              "La documentación.",
+              "Las herramientas de despliegue.",
+              "Todos los anteriores."
+            ],
+            "correct": "Todos los anteriores.",
+            "description": "Es fundamental versionar no solo el código fuente de la aplicación, sino también la documentación, los scripts de despliegue, las dependencias y las herramientas, para asegurar que se pueda reproducir una versión exacta de la aplicación en cualquier momento."
+        },
+        {
+            "question": "¿En qué consiste la edición simultánea?",
+            "options": [
+              "Varios desarrolladores editan un mismo fichero y uno de ellos combina los cambios del resto manualmente.",
+              "Un desarrollador bloquea un fichero para trabajar sobre él.",
+              "Varios desarrolladores trabajan sobre el mismo repositorio y probablemente sobre los mismos ficheros y el sistema se encarga de fusionar los cambios de todos automáticamente.",
+              "Ninguna de las anteriores."
+            ],
+            "correct": "Varios desarrolladores trabajan sobre el mismo repositorio y probablemente sobre los mismos ficheros y el sistema se encarga de fusionar los cambios de todos automáticamente.",
+            "description": "La edición simultánea permite que varios desarrolladores trabajen en el mismo repositorio y, si modifican los mismos ficheros, el sistema se encarga de fusionar los cambios de manera automática, aunque a veces es necesario resolver conflictos manualmente."
+        },
+        {
+            "question": "¿Qué significa «viajar en el tiempo» en el contexto de los sistemas de control de versiones?",
+            "options": [
+              "Que se pueden instalar versiones antiguas de una aplicación.",
+              "Que las nuevas versiones son compatibles con las anteriores.",
+              "Que un desarrollador puede trabajar en una versión antigua del repositorio.",
+              "Ninguna de las anteriores."
+            ],
+            "correct": "Que un desarrollador puede trabajar en una versión antigua del repositorio.",
+            "description": "El concepto de «viajar en el tiempo» hace referencia a la capacidad de un desarrollador para acceder a cualquier commit del historial del repositorio y trabajar con una versión anterior del código, lo que permite realizar cambios sobre versiones pasadas."
+        },
+        {
+            "question": "¿Qué metadatos incluyen los commits?",
+            "options": [
+              "Autor.",
+              "Fecha.",
+              "Comentarios.",
+              "Todos los anteriores."
+            ],
+            "correct": "Todos los anteriores.",
+            "description": "Los commits incluyen varios metadatos como el autor, la fecha y los comentarios, así como un identificador único que los hace fácilmente rastreables, y en algunos casos, también pueden incluir una firma."
+        },
+        {
+            "question": "¿Cómo se recomienda versionar las dependencias de una aplicación?",
+            "options": [
+              "Copiando el código fuente de la dependencia dentro de una carpeta del repositorio de la aplicación.",
+              "Manteniendo un documento con instrucciones sobre cómo instalarla.",
+              "Referenciando la versión de la dependencia como una librería e instalándola con un gestor de paquetes durante el despliegue.",
+              "Todas los anteriores son estrategias válidas."
+            ],
+            "correct": "Referenciando la versión de la dependencia como una librería e instalándola con un gestor de paquetes durante el despliegue.",
+            "description": "La mejor práctica es referenciar las dependencias como librerías e instalarlas con un gestor de paquetes durante el despliegue, lo que permite una gestión más eficiente de las versiones y facilita la actualización automática."
+        },
+        {
+            "question": "¿Cómo se crea una nueva rama llamada feature en Git?",
+            "options": [
+              "git checkout -b feature.",
+              "git branch feature.",
+              "git create branch feature.",
+              "A y B."
+            ],
+            "correct": "A y B.",
+            "description": "La opción A crea y activa la nueva rama en la copia de trabajo, mientras que la opción B solo crea la rama sin cambiar la rama activa."
+        },
+        {
+            "type": "matching",
+            "question": "Relaciona el concepto con su definición.",
+            "pairs": [
+              {
+                "term": "Commit",
+                "definition": "Conjunto de cambios registrados en la historia."
+              },
+              {
+                "term": "Rama",
+                "definition": "Puntero a un conjunto de cambios consecutivos."
+              },
+              {
+                "term": "Repositorio",
+                "definition": "Almacén de los cambios de un sistema o aplicación."
+              },
+              {
+                "term": "Fusión",
+                "definition": "Unión de dos ramas."
+              }
+            ]
+        },
+        {
+            "type": "matching",
+            "question": "Relaciona cada flujo con su característica.",
+            "pairs": [
+              {
+                "term": "Flujo centralizado",
+                "definition": "Hay una única rama."
+              },
+              {
+                "term": "Feature branching workflow",
+                "definition": "Hay una rama principal y una rama nueva para cada cambio que haya que implementar."
+              },
+              {
+                "term": "Flujo de GitLab",
+                "definition": "Cada rama corresponde con un entorno de despliegue."
+              },
+              {
+                "term": "Forking workflow",
+                "definition": "Requiere una plataforma que soporte el concepto de pull request."
+              }
+            ]
+        },
+        {
+            "question": "¿Por qué un sistema de control de versiones distribuido no necesita bloqueo de archivos?",
+            "options": [
+              "Sí que lo necesita.",
+              "Porque cada usuario trabaja con una copia completa del repositorio.",
+              "Porque son sistemas más antiguos y limitados.",
+              "Porque cada usuario es propietario de un fichero y solo ese usuario puede modificarlo."
+            ],
+            "correct": "Porque cada usuario trabaja con una copia completa del repositorio.",
+            "description": "Cada usuario puede, por tanto, trabajar en todos los ficheros que necesite; el sistema se encargará de fusionar los cambios automática o de avisar al usuario si hay conflictos que se deben resolver manualmente."
+        },
+        {
+            "question": "¿Por qué no se puede aplicar el flujo de GitHub en un sistema de control de versiones centralizado?",
+            "options": [
+              "Técnicamente se puede, aunque no es habitual.",
+              "Porque solo funciona con GitHub, que se basa en Git, que es un sistema de control de versiones distribuido.",
+              "Porque se basa en los conceptos de fork y pull requests, que solo ofrecen los sistemas distribuidos.",
+              "Ninguna de las anteriores."
+            ],
+            "correct": "Porque se basa en los conceptos de fork y pull requests, que solo ofrecen los sistemas distribuidos.",
+            "description": "El flujo de GitHub se puede aplicar en otras plataformas, como BitBucket y GitLab."
+        },
+        {
+            "question": "¿Cuántas ramas soporta el flujo centralizado?",
+            "options": [
+              "Solo una, master o trunk.",
+              "Solo una en el repositorio principal y tantas como sean necesarias en los forks.",
+              "Una principal y una de desarrollo.",
+              "Una principal, una de desarrollo y tantas como sean necesarias para las funcionalidades nuevas."
+            ],
+            "correct": "Solo una, master o trunk.",
+            "description": "Es el flujo más cercano al concepto de integración continua extrema, ya que todos los cambios se añaden a la rama principal directamente."
+        },
+        {
+            "question": "¿Por qué una rama de hotfix se fusiona tanto a master como a develop en el Gitflow?",
+            "options": [
+              "Solo se fusiona a master, no a develop.",
+              "En Gitflow las modificaciones se fusionan en develop y este se fusiona sobre master, siempre.",
+              "Por convenio. Técnicamente no hace falta.",
+              "Porque el cambio es necesario en producción y debe estar disponible en master, pero; además, hay que incorporarlo en cualquier prueba que se esté realizando en el desarrollo de la siguiente versión."
+            ],
+            "correct": "Porque el cambio es necesario en producción y debe estar disponible en master, pero; además, hay que incorporarlo en cualquier prueba que se esté realizando en el desarrollo de la siguiente versión.",
+            "description": "De lo contrario, los entornos de pruebas pueden no comportarse igual que producción."
+        },
+        {
+            "question": "¿Se puede implementar feature branching con GitHub sin usar pull requests?",
+            "options": [
+              "No, en GitHub es obligatorio usar pull requests.",
+              "Sí, porque GitHub ofrece la funcionalidad de abrir pull requests dentro de un mismo repositorio, que son otro tipo de pull requests.",
+              "Sí, feature branching puede implementarse en cualquier tipo de sistema de control de versiones centralizado o distribuido.",
+              "B y C."
+            ],
+            "correct": "Sí, feature branching puede implementarse en cualquier tipo de sistema de control de versiones centralizado o distribuido.",
+            "description": "GitHub ofrece todas las funcionalidades de un servidor de Git y, por tanto, soporta un flujo que funcione sobre Git."
+        },
+        {
+            "question": "¿Cómo se crea un fork en GitHub?",
+            "options": [
+              "En la interfaz de GitHub, haciendo clic sobre el botón Fork.",
+              "Con git fork new.",
+              "Con git clone --fork .",
+              "En la interfaz de GitHub, en el asistente de New repository, hay que seleccionar que se trata de un fork e indicar el repositorio principal."
+            ],
+            "correct": "En la interfaz de GitHub, haciendo clic sobre el botón Fork.",
+            "description": "Los forks no son más que clones, pero GitHub ofrece una funcionalidad adicional para identificar que un repositorio es un fork de otro."
+        },
+        {
+            "question": "Un desarrollador no tiene acceso de escritura al repositorio principal repo y ha trabajado en una rama new-feature en su fork. Al abrir la pull request, ¿cuál es la rama de origen y cuál es la de destino?",
+            "options": [
+              "El origen es repo:new-feature y el destino es repo:master.",
+              "El origen es fork/repo:new-feature y el destino es repo:master.",
+              "El origen es fork/repo:new-feature y el destino es repo:new-feature.",
+              "El origen es repo:new-feature y el destino es fork/repo:master."
+            ],
+            "correct": "El origen es fork/repo:new-feature y el destino es repo:master.",
+            "description": "La rama de trabajo existe en el fork, no en el repositorio principal. El destino es la rama principal del repositorio original."
+        },
+        {
+            "question": "¿Qué significa que un repositorio local pueda tener varios repositorios remotos?",
+            "options": [
+              "En un sistema distribuido un repositorio puede intercambiar ramas y commits con cualquier otro repositorio. Estos otros repositorios se consideran remotos, y puede definirse más de uno. Además, el usuario puede tener acceso de lectura sobre unos y de lectura y escritura sobre otros.",
+              "Lo normal es que haya un único repositorio remoto: el fork del usuario.",
+              "Git solo permite un repositorio remoto, pero Subversion permite varios.",
+              "Ninguna de las anteriores."
+            ],
+            "correct": "En un sistema distribuido un repositorio puede intercambiar ramas y commits con cualquier otro repositorio. Estos otros repositorios se consideran remotos, y puede definirse más de uno. Además, el usuario puede tener acceso de lectura sobre unos y de lectura y escritura sobre otros.",
+            "description": "En un sistema de control de versiones distribuido como Git, un repositorio local puede tener varios repositorios remotos para intercambiar datos con ellos. Cada repositorio remoto puede tener diferentes niveles de acceso."
+        },
+        {
+            "question": "En Gitflow, ¿por qué se dice que cada fusión sobre master es una nueva versión?",
+            "options": [
+              "No es cierto; en Gitflow se trabaja únicamente con master.",
+              "Porque se añade una etiqueta con el número de la versión a esos commits.",
+              "Por convenio, en master no se añaden commits que no se hayan planificado para una versión concreta. El trabajo de preparación de la versión se ha llevado a cabo en las ramas release-* o hotfix-*. Una rama release-* puede tener commits que no estén listos para producción, pero cuando su HEAD está lista, se fusiona sobre master, por lo que esta también estará lista para producción.",
+              "Por convenio, las ramas de características nuevas se fusionan sobre master justo antes de preparar la nueva versión. Se fusionan todas juntas, por lo que master está listo para producción."
+            ],
+            "correct": "Por convenio, en master no se añaden commits que no se hayan planificado para una versión concreta. El trabajo de preparación de la versión se ha llevado a cabo en las ramas release-* o hotfix-*. Una rama release-* puede tener commits que no estén listos para producción, pero cuando su HEAD está lista, se fusiona sobre master, por lo que esta también estará lista para producción.",
+            "description": "En Gitflow, la rama master siempre refleja el código que está listo para producción. Las fusiones a master solo se realizan cuando una versión completa está lista para ser liberada, generalmente después de la preparación en ramas de tipo release o hotfix."
+        },
+        {
+            "question": "¿Cuántas fases de prueba tiene un pipeline de CICD?",
+            "options": [
+              "Tres: unitarias, de aceptación automáticas y de aceptación manuales.",
+              "Tantas como sean necesarias en cada proyecto de desarrollo.",
+              "Solo una, la inicial.",
+              "Cinco: unitarias, estáticas, de aceptación automática, de aceptación manual y smoke tests."
+            ],
+            "correct": "Tantas como sean necesarias en cada proyecto de desarrollo.",
+            "description": "Las fases de un pipeline de CI/CD deben adaptarse a los requisitos específicos del proyecto. No hay un número fijo de fases, ya que se pueden incluir varias según las necesidades del equipo de desarrollo, como pruebas unitarias, de integración, de aceptación, entre otras."
+        },
+        {
+            "question": "¿Cuándo debe detenerse un pipeline?",
+            "options": [
+              "Cuando se detecta un error de sintaxis en el código.",
+              "Cuando falla la compilación.",
+              "Cuando falla una de las pruebas.",
+              "Todas las anteriores."
+            ],
+            "correct": "Todas las anteriores.",
+            "description": "Un pipeline debe detenerse cuando se detecta cualquier situación que afecte negativamente al código o a la calidad del software, como errores de sintaxis, fallos de compilación o fallos en las pruebas. Esto garantiza que el código en producción se mantenga estable y funcional."
+        },
+        {
+            "question": "¿Cuándo no hace falta compilar un software?",
+            "options": [
+              "Siempre es necesario compilar el software.",
+              "Cuando se trata de Java, ya que el bytecode no es realmente una compilación.",
+              "En lenguajes interpretados.",
+              "En lenguajes compilados."
+            ],
+            "correct": "En lenguajes interpretados.",
+            "description": "Los lenguajes interpretados, como Python o JavaScript, no requieren un paso de compilación previo, ya que el intérprete lee el código fuente y lo ejecuta directamente. En cambio, los lenguajes compilados requieren una compilación para convertir el código fuente en un formato ejecutable."
+        },
+        {
+            "question": "¿Por qué es necesario empaquetar un software?",
+            "options": [
+              "Solo es necesario empaquetar si el lenguaje es compilado.",
+              "Para facilitar la distribución e instalación.",
+              "Para incluir ficheros necesarios para el funcionamiento, como configuraciones y ficheros estáticos.",
+              "B y C."
+            ],
+            "correct": "B y C.",
+            "description": "El empaquetado permite incluir todos los elementos necesarios para el funcionamiento de la aplicación, como configuraciones y ficheros estáticos, y facilita su distribución e instalación, asegurando que todo lo necesario para ejecutar la aplicación esté incluido."
+        },
+        {
+            "question": "¿En qué consiste un smoke test?",
+            "options": [
+              "Es una prueba sencilla que permite comprobar si un sistema ha arrancado correctamente, incluyendo todas sus dependencias.",
+              "Es una prueba sin estado ni base de datos.",
+              "Es una prueba manual en la que se verifican funcionalidades ofrecidas al usuario.",
+              "Es una comprobación del servicio para saber si ha arrancado o no."
+            ],
+            "correct": "Es una prueba sencilla que permite comprobar si un sistema ha arrancado correctamente, incluyendo todas sus dependencias.",
+            "description": "El smoke test es una prueba básica que verifica si el sistema, en su conjunto, ha arrancado correctamente, evaluando de forma rápida las dependencias esenciales para asegurarse de que todo está en funcionamiento. Es una prueba preliminar antes de realizar pruebas más detalladas."
+        },
+        {
+            "question": "¿Por qué hay que construir una única vez?",
+            "options": [
+              "Para acelerar el proceso.",
+              "Para asegurar que el paquete que ha pasado las pruebas es el mismo que se despliega en producción.",
+              "A y B.",
+              "No es necesario. De hecho, conviene construir en cada fase para paralelizar mejor."
+            ],
+            "correct": "A y B.",
+            "description": "Construir una única vez garantiza que el paquete que ha pasado las pruebas sea el mismo que se despliega en producción, lo que asegura la fiabilidad del proceso. Además, evita la duplicación de esfuerzos y acelera el ciclo de vida del despliegue."
+        },
+        {
+            "question": "¿Qué propiedades deben tener los scripts de despliegue?",
+            "options": [
+              "Deben estar incluidos en el control de cambios.",
+              "Se debe usar el mismo script para desplegar todos los entornos.",
+              "El script debe aplicar diferentes configuraciones en cada entorno, que obtiene de una ubicación diferente (del control de cambios o de un gestor de configuraciones).",
+              "Todas a las anteriores."
+            ],
+            "correct": "Todas a las anteriores.",
+            "description": "Los scripts de despliegue deben ser gestionados en control de cambios para asegurar su trazabilidad. Además, debe ser un solo script para facilitar la consistencia entre entornos, aplicando configuraciones diferentes para cada entorno, lo que permite un proceso de despliegue más eficiente y controlado."
+        },
+        {
+            "question": "¿En qué consiste desplegar una copia de producción?",
+            "options": [
+              "En clonar el sistema de producción, antes de los despliegues, como copia de seguridad.",
+              "En desplegar, en un entorno lo más parecido posible a producción, en una fase de prueba para reducir el riesgo del despliegue en producción.",
+              "Esto se consigue con despliegues blue/green: se despliega una copia de producción y se apuntan los balanceadores a la nueva instancia.",
+              "Ninguna de las anteriores."
+            ],
+            "correct": "En desplegar, en un entorno lo más parecido posible a producción, en una fase de prueba para reducir el riesgo del despliegue en producción.",
+            "description": "Desplegar una copia de producción implica realizar pruebas en un entorno similar a producción para asegurar que todo funcione correctamente antes de llevar a cabo el despliegue final en producción, lo que ayuda a reducir los riesgos."
+        },
+        {
+            "question": "¿Por qué un pipeline no sirve para proyectos que funcionan con pull requests?",
+            "options": [
+              "Sí que se pueden usar.",
+              "Porque entonces no hay una construcción única del paquete.",
+              "Porque el flujo no se puede adaptar.",
+              "Porque es un desperdicio construir el paquete para todas las pull requests."
+            ],
+            "correct": "Porque es un desperdicio construir el paquete para todas las pull requests.",
+            "description": "El uso de un pipeline en proyectos con pull requests puede ser ineficiente si se construye el paquete para cada solicitud de extracción, lo que consume recursos innecesarios. En estos casos, se puede optar por otro enfoque, como hacer el build solo para las pull requests relevantes o cuando se fusionan."
+        },
+        {
+            "question": "¿Cómo debería ser una prueba unitaria?",
+            "options": [
+              "Rápida.",
+              "Independiente del estado.",
+              "Dirigida a una única función.",
+              "Todas las anteriores."
+            ],
+            "correct": "Todas las anteriores.",
+            "description": "Una prueba unitaria debe ser rápida, independiente del estado y centrada en una única función para garantizar que los componentes se comporten correctamente de manera aislada."
+        },
+        {
+            "question": "¿Qué pruebas requieren que la aplicación esté arrancada?",
+            "options": [
+              "De sistema.",
+              "De rendimiento.",
+              "De aceptación.",
+              "Todas las anteriores."
+            ],
+            "correct": "Todas las anteriores.",
+            "description": "Las pruebas de sistema, rendimiento y aceptación requieren que la aplicación esté desplegada junto a sus dependencias, ya que se centran en verificar el comportamiento global de la aplicación en un entorno de ejecución real."
+        },
+        {
+            "question": "¿Cuáles de las siguientes se pueden considerar pruebas no funcionales?",
+            "options": [
+              "De rendimiento.",
+              "De cobertura.",
+              "De seguridad.",
+              "Todas las anteriores."
+            ],
+            "correct": "Todas las anteriores.",
+            "description": "Las pruebas no funcionales comprueban requisitos ajenos a las características que ofrece la aplicación. Ejemplos incluyen la seguridad, el rendimiento y la cobertura, que no se centran en la funcionalidad directa, sino en otros aspectos del sistema, como su eficiencia, seguridad y cobertura de pruebas."
+        },
+        {
+            "question": "¿Por qué es útil que el desarrollador pueda acceder a los resultados de las pruebas?",
+            "options": [
+              "En general no lo necesitan.",
+              "Para poder estudiar el error y ser capaz de corregirlo.",
+              "Para identificar quién ha roto el código.",
+              "Ninguna de las anteriores."
+            ],
+            "correct": "Para poder estudiar el error y ser capaz de corregirlo.",
+            "description": "Es fundamental que el desarrollador tenga acceso a los resultados de las pruebas para poder analizar los errores y corregirlos de manera eficiente. Sin esta información, el desarrollador solo sabría que el pipeline ha fallado, pero no podría identificar el motivo del error."
+        },
+        {
+            "question": "¿Para qué sirve el decorador @pytest.mark.unit?",
+            "options": [
+              "Convierte una prueba de servicio en unitaria.",
+              "Para evitar la ejecución de una prueba.",
+              "Etiqueta la prueba en la batería de pruebas unit.",
+              "Exporta el informe de la prueba en formato JUnit."
+            ],
+            "correct": "Etiqueta la prueba en la batería de pruebas unit.",
+            "description": "El decorador @pytest.mark.unit se utiliza para etiquetar las pruebas como unitarias, lo que permite agruparlas y ejecutarlas por separado, facilitando la organización y ejecución selectiva de las pruebas."
+        },
+        {
+            "question": "¿Qué significa que una prueba de GUI se ejecute en un navegador headless?",
+            "options": [
+              "En el navegador no tiene una ventana visible.",
+              "Que es un navegador en modo texto, por lo que no ejecutará código JavaScript.",
+              "Que el navegador se ejecuta en un servidor remoto sin pantalla.",
+              "Ninguna de las anteriores."
+            ],
+            "correct": "En el navegador no tiene una ventana visible.",
+            "description": "Un navegador headless ejecuta todas las funciones de un navegador tradicional, como procesar HTML, ejecutar JavaScript, y realizar solicitudes HTTP, pero no tiene una interfaz visual que se muestre al usuario."
+        },
+        {
+            "question": "¿Qué son los informes JUnit?",
+            "options": [
+              "Ficheros XML exclusivos de pruebas en Java.",
+              "Ficheros XML resultado de ejecución de pruebas.",
+              "Ficheros XML exclusivos de pruebas unitarias.",
+              "Ficheros PDF archivados por las herramientas de CICD."
+            ],
+            "correct": "Ficheros XML resultado de ejecución de pruebas.",
+            "description": "Los informes JUnit son ficheros en formato XML que contienen los resultados de la ejecución de pruebas, y aunque JUnit es originario de Java, este formato es ampliamente utilizado en muchos lenguajes y herramientas de pruebas."
+        },
+        {
+            "question": "¿Cómo se pueden paralelizar las pruebas?",
+            "options": [
+              "Aprovechando la ejecución en múltiples hilos.",
+              "Separando las pruebas en baterías y ejecutándolas en paralelo.",
+              "Todas las anteriores.",
+              "En general no se puede y deben ejecutarse en serie."
+            ],
+            "correct": "Todas las anteriores.",
+            "description": "Para paralelizar las pruebas se pueden usar tanto la ejecución en múltiples hilos como separar las pruebas en baterías y ejecutarlas en paralelo, siempre que las pruebas lo permitan."
+        },
+        {
+            "question": "¿Para qué sirve una fixture?",
+            "options": [
+              "Para fijar el resultado de una prueba.",
+              "Para fijar un estado conocido antes de ejecutar una prueba y devolver el entorno al estado original al terminar.",
+              "Para borrar la base de datos al terminar las pruebas.",
+              "Para deshabilitar una prueba puntualmente."
+            ],
+            "correct": "Para fijar un estado conocido antes de ejecutar una prueba y devolver el entorno al estado original al terminar.",
+            "description": "Una fixture se utiliza para configurar el estado necesario antes de ejecutar una prueba y restaurar el entorno al finalizarla, asegurando que las pruebas sean independientes y reproducibles."
+        },
+        {
+            "type": "matching",
+            "question": "Relaciona los tipos de pruebas con sus características.",
+            "pairs": [
+              {
+                "term": "Unitarias",
+                "definition": "No dependen de un estado."
+              },
+              {
+                "term": "De sistema",
+                "definition": "Requieren que la aplicación y sus dependencias estén en funcionamiento."
+              },
+              {
+                "term": "De GUI",
+                "definition": "Evalúan la interfaz gráfica."
+              },
+              {
+                "term": "De rendimiento",
+                "definition": "Comprueba cuánta carga soporta una aplicación."
+              }
+            ]
+        },
+        {
+            "question": "¿Por qué las revisiones de código deberían estar incorporadas en el flujo de integración continua?",
+            "options": [
+              "Para que los compañeros del equipo puedan aportar feedback antes de que el código esté fusionado en la rama principal.",
+              "Porque todos los pasos del desarrollo deben estar integrados en una única herramienta de CICD.",
+              "No tienen por qué estar integradas, las revisiones deben ser siempre presenciales y antes de que se envíe el commit.",
+              "Ninguna de las anteriores."
+            ],
+            "correct": "Para que los compañeros del equipo puedan aportar feedback antes de que el código esté fusionado en la rama principal.",
+            "description": "Incorporar las revisiones de código en el flujo de integración continua ayuda a garantizar que los comentarios y sugerencias de los compañeros se realicen antes de fusionar el código a la rama principal, evitando posibles errores y mejorando la calidad del software."
+        },
+        {
+            "question": "¿En qué casos es obligatorio que una revisión apruebe una pull request en GitHub para poder fusionarla?",
+            "options": [
+              "En cualquier caso.",
+              "Cuando se activa la protección de rama.",
+              "Cuando el autor de la pull request no es administrador del repositorio.",
+              "Cuando se abre la pull request en modo borrador."
+            ],
+            "correct": "Cuando se activa la protección de rama.",
+            "description": "La protección de rama permite establecer reglas que, entre otras cosas, requieren la aprobación de una revisión antes de fusionar una pull request. Esta es una medida para mejorar la calidad del código y evitar errores en la rama principal."
+        },
+        {
+            "question": "¿Qué tipo de reglas se tienen en cuenta en una convención de estilo?",
+            "options": [
+              "La longitud máxima de línea.",
+              "El formato de los nombres de variables y funciones.",
+              "El número máximo de líneas de una función.",
+              "Todas las anteriores."
+            ],
+            "correct": "Todas las anteriores.",
+            "description": "Una convención de estilo puede incluir reglas sobre la longitud máxima de las líneas, el formato de los nombres de variables y funciones, y la cantidad máxima de líneas en una función, entre otras, con el objetivo de mantener el código legible, organizado y coherente."
+        },
+        {
+            "question": "¿Por qué los proyectos adoptan convenciones de estilo?",
+            "options": [
+              "Para que el código sea más legible.",
+              "Para facilitar el mantenimiento por desarrolladores diferentes al autor.",
+              "Para aumentar la consistencia entre módulos.",
+              "Todas las anteriores."
+            ],
+            "correct": "Todas las anteriores.",
+            "description": "Las convenciones de estilo son adoptadas para hacer el código más legible, facilitar el mantenimiento por diferentes desarrolladores y aumentar la consistencia entre los distintos módulos del proyecto, lo que facilita su comprensión y gestión a lo largo del tiempo."
+        },
+        {
+            "question": "¿Qué mide la cobertura?",
+            "options": [
+              "El número de pruebas unitarias.",
+              "El número de pruebas totales, incluyendo unitarias, de integración y UI.",
+              "El porcentaje de líneas que se ejecutan durante las pruebas.",
+              "El número de líneas de código."
+            ],
+            "correct": "El porcentaje de líneas que se ejecutan durante las pruebas.",
+            "description": "La cobertura mide el porcentaje de líneas de código que se ejecutan durante las pruebas. Ayuda a evaluar la efectividad de las pruebas y a identificar áreas del código que no se están probando."
+        },
+        {
+            "question": "¿Es una cobertura del 100 % sinónimo de riesgo cero?",
+            "options": [
+              "Claro, porque se han ejecutado todas las líneas del código durante las pruebas.",
+              "Claro, porque no tiene sentido escribir más pruebas.",
+              "No, porque llegar al 100 % no es posible.",
+              "No, porque eso no implica que se hayan probado todas las condiciones y valores de frontera."
+            ],
+            "correct": "No, porque eso no implica que se hayan probado todas las condiciones y valores de frontera.",
+            "description": "Una cobertura del 100 % no garantiza que se hayan probado todas las posibles condiciones o valores de frontera, como los errores o los valores límite. La cobertura solo mide las líneas ejecutadas, no la calidad o exhaustividad de las pruebas."
+        },
+        {
+            "question": "¿Qué valor aporta Sonar a un proyecto?",
+            "options": [
+              "La evaluación de la calidad del proyecto desde diferentes puntos de vista.",
+              "El seguimiento de la evolución de la calidad a lo largo del tiempo.",
+              "La identificación de problemas potenciales.",
+              "Todas las anteriores."
+            ],
+            "correct": "Todas las anteriores.",
+            "description": "Sonar aporta una evaluación integral de la calidad del código, permite seguir su evolución a lo largo del tiempo y ayuda a identificar problemas potenciales, lo que mejora la calidad y mantenibilidad del proyecto."
+        },
+        {
+            "question": "¿Por qué es deseable reducir la complejidad del código?",
+            "options": [
+              "Para que el código sea más legible.",
+              "Para facilitar el mantenimiento por desarrolladores diferentes al autor.",
+              "La A y la B.",
+              "Para poder pasar el umbral de aceptación de Sonar."
+            ],
+            "correct": "La A y la B.",
+            "description": "Reducir la complejidad del código mejora su legibilidad y facilita el mantenimiento, especialmente cuando otros desarrolladores deben trabajar en el proyecto. Además, contribuye a mejorar la calidad general del código."
+        },
+        {
+            "question": "¿Qué significa que Sonar utilice un agente?",
+            "options": [
+              "Que un proceso se encarga de analizar el código y de enviar los resultados a un servidor central.",
+              "Que hay que subir el código a un servidor central para su análisis.",
+              "Que hay que instalar un software adicional junto con el producto para poder analizarlo.",
+              "Todas las anteriores."
+            ],
+            "correct": "Que un proceso se encarga de analizar el código y de enviar los resultados a un servidor central.",
+            "description": "Sonar utiliza un agente para analizar el código de manera distribuida y enviar los resultados a un servidor central, lo que permite una mayor escalabilidad y facilita la integración con herramientas de CICD."
+        },
+        {
+            "question": "¿En qué consisten los perfiles de calidad de Sonar?",
+            "options": [
+              "En un proyecto concreto.",
+              "En todas las reglas posibles de un lenguaje.",
+              "En un umbral de complejidad que marca el proyecto como válido.",
+              "En conjuntos de reglas que se evalúan durante el análisis de los proyectos a los que se asigna el perfil."
+            ],
+            "correct": "En conjuntos de reglas que se evalúan durante el análisis de los proyectos a los que se asigna el perfil.",
+            "description": "Los perfiles de calidad de Sonar son conjuntos de reglas que se aplican durante el análisis de código para evaluar diferentes aspectos de la calidad, como la complejidad, la seguridad y el estilo del código."
+        },
+        {
+            "question": "¿Qué trabajos se pueden programar en Jenkins?",
+            "options": [
+              "Compilación.",
+              "Pruebas.",
+              "Despliegues.",
+              "Todas las anteriores."
+            ],
+            "correct": "Todas las anteriores.",
+            "description": "Aunque su función inicial fuera para integración continua, Jenkins admite cualquier tipo de script, por lo que se puede automatizar cualquier tarea, incluyendo compilación, pruebas y despliegues."
+        },
+        {
+            "question": "¿Cuál es la contraseña por defecto de Jenkins?",
+            "options": [
+              "admin",
+              "Password1!",
+              "Es aleatoria, Jenkins la imprime por la salida estándar. También la guarda en disco. De esta manera no puede recibir ataques con contraseñas por defecto.",
+              "No hay contraseña por defecto, el inicio de sesión es automático."
+            ],
+            "correct": "Es aleatoria, Jenkins la imprime por la salida estándar. También la guarda en disco. De esta manera no puede recibir ataques con contraseñas por defecto.",
+            "description": "También la guarda en disco. De esta manera no puede recibir ataques con contraseñas por defecto."
+        },
+        {
+            "question": "¿Dónde debe definirse el código de un pipeline?",
+            "options": [
+              "En un Jenkinsfile en el repositorio.",
+              "En la definición del trabajo.",
+              "Los trabajos se definen en un formulario web donde se escribe el código a ejecutar.",
+              "Todas las anteriores."
+            ],
+            "correct": "Todas las anteriores.",
+            "description": "Aunque es preferible versionar el código de construcción con un Jenkinsfile en el propio repositorio, Jenkins ofrece también las otras opciones."
+        },
+        {
+            "question": "¿Sobre qué plataformas puede ejecutar un proyecto Jenkins?",
+            "options": [
+              "Sobre cualquier que soporte Java.",
+              "Solo sobre Linux, ya que Jenkins es de código abierto.",
+              "En Windows, Debian y RedHat.",
+              "Ninguna de las anteriores."
+            ],
+            "correct": "Sobre cualquier que soporte Java.",
+            "description": "Tanto el master como los agentes de Jenkins se ejecutan sobre Java, lo que permite que Jenkins sea compatible con diversas plataformas. Un mismo master puede disponer de varios agentes que se ejecuten en plataformas diferentes."
+        },
+        {
+            "question": "¿Para qué sirve archivar artefactos?",
+            "options": [
+              "Para hacer una copia de seguridad de los informes de pruebas.",
+              "Para que Jenkins pueda mostrar los informes de pruebas.",
+              "Para almacenar el resultado de una compilación, una construcción o de un informe de pruebas, junto a los detalles de la ejecución.",
+              "Todas las anteriores."
+            ],
+            "correct": "Para almacenar el resultado de una compilación, una construcción o de un informe de pruebas, junto a los detalles de la ejecución.",
+            "description": "Para almacenar paquetes definitivos es habitual usar un repositorio de artefactos externo, pero la funcionalidad de Jenkins puede ser útil en entornos pequeños."
+        },
+        {
+            "question": "¿Cómo se puede configurar un trabajo para que se ejecute cuando hay cambios en un repositorio?",
+            "options": [
+              "Configurando un webhook en GitHub sobre Jenkins.",
+              "Haciendo una comprobación periódica del repositorio.",
+              "A través de una petición a la API de Jenkins desde un Githook.",
+              "Todas las anteriores."
+            ],
+            "correct": "Todas las anteriores.",
+            "description": "La primera opción es la más eficiente y fiable, pero obliga a que la URL de Jenkins sea accesible desde Internet."
+        },
+        {
+            "question": "¿Qué configuración hay que usar para ejecutar un trabajo de Jenkins a cada hora?",
+            "options": [
+              "A. A partir de un webhook en un sistema con cron.",
+              "B. Un trigger periódico y una agenda 0 * * * *.",
+              "C. Una comprobación periódica del repositorio con una agenda 0 * * * *.",
+              "D. Todas las anteriores."
+            ],
+            "correct": "B. Un trigger periódico y una agenda 0 * * * *.",
+            "description": "Esta programación ejecutará el trabajo cada hora en punto."
+        },
+        {
+            "question": "¿Qué relación hay entre «trabajo» y «ejecución» en Jenkins?",
+            "options": [
+              "A. Son sinónimos.",
+              "B. Un trabajo se ejecuta en el master, mientras que los agentes se encargan de las ejecuciones.",
+              "C. Un trabajo es una definición de un pipeline y la ejecución es cada una de las fases del pipeline.",
+              "D. Un trabajo es una definición de una tarea que puede tener varias fases; una ejecución es una activación concreta del trabajo con unos parámetros y un resultado concretos."
+            ],
+            "correct": "D. Un trabajo es una definición de una tarea que puede tener varias fases; una ejecución es una activación concreta del trabajo con unos parámetros y un resultado concretos.",
+            "description": "Cada trabajo mantiene un historial con las ejecuciones anteriores."
+        },
+        {
+            "question": "¿Cómo se indica que debe ser la ejecución de un trabajo en un nodo con herramientas de compilación de Java?",
+            "options": [
+              "A. Con la sentencia label 'maven' en la sección del agente.",
+              "B. Con la sentencia label 'java' en la sección del agente.",
+              "C. Asignando una etiqueta concreta a los agentes con herramientas de compilación e indicando esa etiqueta en la sentencia label ''.",
+              "D. Todas las anteriores."
+            ],
+            "correct": "C. Asignando una etiqueta concreta a los agentes con herramientas de compilación e indicando esa etiqueta en la sentencia label ''.",
+            "description": "Es fundamental configurar los agentes correctamente."
+        },
+        {
+            "question": "¿Qué servicios ofrece GitLab?",
+            "options": [
+              "A. Repositorio remoto de Git.",
+              "B. Pipelines de CICD.",
+              "C. Registros de paquetes.",
+              "D. Todos los anteriores."
+            ],
+            "correct": "D. Todos los anteriores.",
+            "description": "También ofrece herramientas para gestionar proyectos, monitorización, etc."
+        },
+        {
+            "question": "¿Cómo se llama la funcionalidad de pull request de GitLab?",
+            "options": [
+              "A. Pull request.",
+              "B. Merge request.",
+              "C. Join request.",
+              "D. Branch merge."
+            ],
+            "correct": "B. Merge request.",
+            "description": "La funcionalidad es idéntica a la de GitHub, incluyendo la discusión durante revisiones, aprobaciones, etc."
+        },
+        {
+            "question": "¿Dónde se definen las fases de un pipeline en GitLab?",
+            "options": [
+              "A. En el fichero .gitlab-ci.yml, en la raíz del repositorio.",
+              "B. En la interfaz de GitLab, en la sección de opciones del repositorio.",
+              "C. En Jenkins, a través del plugin de GitLab.",
+              "D. Todas las anteriores son opciones válidas."
+            ],
+            "correct": "A. En el fichero .gitlab-ci.yml, en la raíz del repositorio.",
+            "description": "El nombre del fichero es configurable, pero debe estar versionado en el mismo repositorio donde se ejecuta el pipeline."
+        },
+        {
+            "question": "¿Dónde se ejecutan los trabajos de un pipeline en GitLab?",
+            "options": [
+              "A. En el servidor principal, si no hay runners asociados al proyecto, o en los runners asociados.",
+              "B. En los runners asociados al proyecto, en los compartidos entre varios proyectos.",
+              "C. En los agentes de Jenkins a través del plugin de GitLab.",
+              "D. En el servidor principal de GitLab."
+            ],
+            "correct": "B. En los runners asociados al proyecto, en los compartidos entre varios proyectos.",
+            "description": "GitLab necesita delegar en los runners todos los trabajos de un pipeline."
+        },
+        {
+            "question": "¿Cómo se determina el orden de ejecución de fases y trabajos?",
+            "options": [
+              "A. Las fases se ejecutan secuencialmente.",
+              "B. Los trabajos de una misma fase se ejecutan en paralelo.",
+              "C. Los trabajos empiezan tan pronto terminan sus dependencias.",
+              "D. Todas las anteriores."
+            ],
+            "correct": "D. Todas las anteriores.",
+            "description": "A y B aplican cuando se define un pipeline simple. C aplica si el pipeline se define como un grafo dirigido acíclico."
+        },
+        {
+            "question": "¿Para qué sirve la directiva artifacts?",
+            "options": [
+              "A. Para guardar archivos o directorios que serán utilizados en fases posteriores del pipeline.",
+              "B. Para guardar archivos o directorios que deben estar disponibles para los usuarios al terminar el pipeline.",
+              "C. Para recopilar informes de pruebas, cobertura o análisis de seguridad y mostrarlos en la interfaz de GitLab.",
+              "D. Todas las anteriores."
+            ],
+            "correct": "D. Todas las anteriores.",
+            "description": "GitLab es capaz de interpretar algunos artefactos, como los informes JUnit, mientras que otros se almacenan para poder ser descargados. Además, como los trabajos se ejecutan en runners diferentes, es necesario mover los archivos generados (por ejemplo, compilados) de un trabajo a otro mediante esta directiva."
+        },
+        {
+            "question": "¿Cuándo se ejecuta un pipeline en GitLab?",
+            "options": [
+              "A. Cuando hay un cambio en una rama, ya sean etiquetas de Git o commits nuevos.",
+              "B. Cuando se abre una merge request a partir de una rama de un fork.",
+              "C. Es necesario arrancarlas manualmente desde la interfaz de GitLab o con el comando gitlab-runner start.",
+              "D. Ninguna de las anteriores."
+            ],
+            "correct": "A. Cuando hay un cambio en una rama, ya sean etiquetas de Git o commits nuevos.",
+            "description": "GitLab inicia la ejecución del pipeline tan pronto como detecta un cambio, ya sea en commits nuevos o etiquetas de Git. La definición del archivo .gitlab-ci.yml puede añadir más etapas dependiendo de cómo se haya configurado el pipeline. También se pueden iniciar manualmente o a partir de una programación."
+        },
+        {
+            "question": "¿Cuándo se borran las imágenes del registro de contenedores?",
+            "options": [
+              "A. Manualmente.",
+              "B. Al finalizar el pipeline, a menos que se etiqueten con *-latest.",
+              "C. Tras un intervalo configurable, a menos que estén incluidas como excepción.",
+              "D. A los noventa días."
+            ],
+            "correct": "C. Tras un intervalo configurable, a menos que estén incluidas como excepción.",
+            "description": "El borrado automático de imágenes del registro de contenedores se puede configurar con un intervalo de tiempo, y se pueden definir expresiones regulares para incluir o excluir imágenes específicas. Este proceso también puede desactivarse si es necesario."
+        },
+        {
+            "question": "¿Cuándo se ejecuta el contenido de before_script?",
+            "options": [
+              "A. Al inicio del pipeline.",
+              "B. Antes de iniciar cada trabajo, siempre y cuando el trabajo no sobreescriba la sección before_script explícitamente.",
+              "C. Antes de iniciar cada trabajo.",
+              "D. Al terminar cada trabajo."
+            ],
+            "correct": "B. Antes de iniciar cada trabajo, siempre y cuando el trabajo no sobreescriba la sección before_script explícitamente.",
+            "description": "El contenido se ejecuta en el mismo contexto en el que se ejecutará el script del trabajo. Si los comandos fallan, el trabajo se detiene y se marca como erróneo."
+        },
+        {
+            "question": "¿Cuándo se detiene un pipeline?",
+            "options": [
+              "A. Se pueden detener manualmente.",
+              "B. Si un trabajo falla, la siguiente fase no se ejecuta, pero los trabajos que se pongan en marcha en paralelo pueden terminar.",
+              "C. Se pueden cancelar automáticamente si la rama recibe más cambios durante la ejecución de su pipeline.",
+              "D. Todas las anteriores."
+            ],
+            "correct": "D. Todas las anteriores.",
+            "description": "Se puede configurar un trabajo para mostrar un error en el log y marcar el pipeline como inestable, pero sin detenerlo. Si esta opción no se configura explícitamente, el pipeline se detendrá al fallar un trabajo."
+        },
+        {
+            "question": "¿Con qué sistemas de control de versiones distribuidos es compatible Bitbucket?",
+            "options": [
+              "A. GitHub.",
+              "B. Git.",
+              "C. Mercurial.",
+              "D. SVN."
+            ],
+            "correct": "B. Git.",
+            "description": "Bitbucket ofrecía compatibilidad con Mercurial, pero dejó de ofrecerla en 2020."
+        },
+        {
+            "question": "¿En qué fichero se definen los pipelines de CircleCI?",
+            "options": [
+              "A. .circleci/config.yml.",
+              "B. gitlab-ci.yml.",
+              "C. Jenkinsfile.",
+              "D. .circle-ci.yml."
+            ],
+            "correct": "A. .circleci/config.yml.",
+            "description": "Al igual que en GitLab, debe versionarse en el repositorio y estar en formato YAML."
+        },
+        {
+            "question": "¿Cómo se ejecutan los trabajos de un workflow de CircleCI?",
+            "options": [
+              "A. Secuencialmente.",
+              "B. En paralelo.",
+              "C. En paralelo por defecto, salvo que se definan dependencias entre ellos.",
+              "D. Secuencialmente por defecto, salvo que se indique que pueden ejecutarse en paralelo."
+            ],
+            "correct": "C. En paralelo por defecto, salvo que se definan dependencias entre ellos.",
+            "description": "Si se define una dependencia en un trabajo, este empezará cuando la dependencia haya terminado."
+        },
+        {
+            "question": "¿Se puede seguir un flujo de trabajo de GitHub con Bitbucket?",
+            "options": [
+              "A. No, en todo caso se podría seguir el flujo de trabajo de Bitbucket.",
+              "B. No, porque Bitbucket no soporta forks ni pull requests.",
+              "C. No, aunque sí que soporta el flujo de trabajo de GitLab.",
+              "D. Sí, ya que soporta la creación de forks y pull requests."
+            ],
+            "correct": "D. Sí, ya que soporta la creación de forks y pull requests.",
+            "description": "El nombre del flujo no es exclusivo de la herramienta y puede seguirse si el servicio de repositorios remotos ofrece estas funcionalidades."
+        },
+        {
+            "question": "¿Con qué servicios de control de versiones se integra CircleCI?",
+            "options": [
+              "A. GitHub y Bitbucket.",
+              "B. GitHub, GitLab y Bitbucket.",
+              "C. Con cualquiera que ofrezca un plugin, como Jenkins.",
+              "D. Con cualquiera que use Git como sistema de control de versiones."
+            ],
+            "correct": "A. GitHub y Bitbucket.",
+            "description": "En el momento de publicar estos materiales, CircleCI está limitado a GitHub y Bitbucket."
+        },
+        {
+            "question": "¿A partir de qué cambios se ejecuta un pipeline de CircleCI?",
+            "options": [
+              "A. Creación de ramas nuevas y cambios en ramas existentes.",
+              "B. Creación de pull requests.",
+              "C. Creación de etiquetas de Git, si se activan explícitamente.",
+              "D. Cualquiera de las anteriores."
+            ],
+            "correct": "D. Cualquiera de las anteriores.",
+            "description": "Todas las opciones son disparadores que iniciarán la ejecución del pipeline."
+        },
+        {
+            "question": "¿En qué consiste un orb de CircleCI?",
+            "options": [
+              "A. En una plantilla con fases habituales para un sistema concreto.",
+              "B. En un paquete YAML reutilizable.",
+              "C. Código reutilizable, bien privado o público, ofrecido habitualmente por las propias organizaciones.",
+              "D. Todas las anteriores."
+            ],
+            "correct": "D. Todas las anteriores.",
+            "description": "Los orbs son paquetes YAML que definen elementos reutilizables en un pipeline a modo de macros o funciones."
+        },
+        {
+            "question": "¿Qué ventaja tiene usar Nexus como proxy?",
+            "options": [
+              "A. Acelera la descarga de paquetes en una red local.",
+              "B. Aísla a los sistemas internos de posibles caídas de servicio de repositorios públicos.",
+              "C. Centraliza el acceso a Internet a un único sistema en sistemas privados donde esta conectividad está restringida.",
+              "D. Todas las anteriores."
+            ],
+            "correct": "D. Todas las anteriores.",
+            "description": "Estos repositorios funcionan como caché y pueden servir los paquetes más rápido que los repositorios remotos."
+        },
+        {
+            "question": "¿Cuándo tiene sentido usar Nexus como repositorio para paquetes o imágenes?",
+            "options": [
+              "A. Cuando los proyectos son privados y no se desea alojarlos en un repositorio público.",
+              "B. Cuando se quiere acelerar la publicación de paquetes.",
+              "C. Cuando no se dispone de una cuenta en el repositorio público.",
+              "D. Ninguna de las anteriores."
+            ],
+            "correct": "A. Cuando los proyectos son privados y no se desea alojarlos en un repositorio público.",
+            "description": "Algunos sistemas ofrecen repositorios privados en modo SaaS, por lo que el acceso es privado, al igual que en Nexus."
+        },
+        {
+            "question": "¿Qué gestores de paquetes soporta Nexus?",
+            "options": [
+              "A. npm.",
+              "B. docker.",
+              "C. apt.",
+              "D. Todas las anteriores."
+            ],
+            "correct": "D. Todas las anteriores.",
+            "description": "Soporta algunos más, como yum, pypi o maven."
+        },
+        {
+            "question": "¿Qué significa que un despliegue no tenga pérdida de servicio?",
+            "options": [
+              "A. Que ofrece todas las funcionalidades durante todo el proceso de despliegue.",
+              "B. Que puede no prestar servicio durante un período de tiempo anunciado previamente como «mantenimiento».",
+              "C. Que, en la mayoría de los casos, los usuarios pueden seguir accediendo, pero las respuestas del sistema pueden ser inconsistentes.",
+              "D. Que el despliegue siempre es exitoso y nunca hay vuelta atrás."
+            ],
+            "correct": "A. Que ofrece todas las funcionalidades durante todo el proceso de despliegue.",
+            "description": "Si el despliegue es exitoso, la nueva versión está disponible sin que haya interrupción en el servicio; si se detecta un fallo, se puede volver a la versión antigua con una disrupción mínima."
+        },
+        {
+            "question": "¿Por qué el esquema de datos se puede convertir en un problema si dos versiones conviven en el tiempo?",
+            "options": [
+              "A. En general, no suele ser un problema. Las bases de datos se encargan de mantener el esquema.",
+              "B. Porque dos servidores con versiones diferentes pueden escribir el mismo registro a la vez provocando un bloqueo.",
+              "C. Porque el código nuevo puede escribir un dato con un esquema incompatible con el código antiguo.",
+              "D. Porque habría que aplicar una subida de esquema si accede la versión nueva, y una bajada de esquema si accede la versión antigua."
+            ],
+            "correct": "C. Porque el código nuevo puede escribir un dato con un esquema incompatible con el código antiguo.",
+            "description": "Esto puede ocurrir si cada registro de la base de datos puede tener un esquema diferente. Si todos los registros de una tabla comparten el esquema, la versión antigua no podrá siquiera leer los datos."
+        },
+        {
+            "question": "¿Cómo se pueden actualizar sistemas dependientes sin que haya problemas de compatibilidad?",
+            "options": [
+              "A. Ofreciendo una API que siempre sea compatible hacia atrás.",
+              "B. Versionando la API, de forma que se pueda actualizar un sistema dependiente a la siguiente versión en cualquier momento.",
+              "C. Actualizándolos siempre en conjunto.",
+              "D. Todas las anteriores."
+            ],
+            "correct": "D. Todas las anteriores.",
+            "description": "La situación ideal es ofrecer API con compatibilidad hacia atrás siempre que sea posible y exponer una nueva versión cuando hay cambios incompatibles sin dejar de ofrecer la versión antigua."
+        },
+        {
+            "question": "¿Por qué se ha dicho que el modelo de despliegue blue/green ofrece todo o nada?",
+            "options": [
+              "A. Porque actualiza los servidores in situ, sin desplegar ninguno nuevo.",
+              "B. Porque en un momento dado, todos los servidores que dan servicio tienen la misma versión del código.",
+              "C. Porque solo sirve para todos los sistemas de una aplicación.",
+              "D. Ninguna de las anteriores."
+            ],
+            "correct": "B. Porque en un momento dado, todos los servidores que dan servicio tienen la misma versión del código.",
+            "description": "Este modelo se basa en dirigir todo el tráfico a uno de los dos entornos, o bien al azul, o bien al verde."
+        },
+        {
+            "question": "¿Qué ventajas ofrece el Canary releasing frente a un despliegue blue/green?",
+            "options": [
+              "A. Si se introduce un error en la nueva versión, solo afecta a los usuarios del servidor canario.",
+              "B. Si se detecta un error, se puede detener el servidor canario o dejar de dirigirle tráfico, sin necesidad de modificar los otros servidores en funcionamiento.",
+              "C. Puede usarse para pruebas A/B.",
+              "D. A y B son correctas."
+            ],
+            "correct": "D. A y B son correctas.",
+            "description": "En general, los servidores canario reducen el riesgo de los despliegues, ya que el volumen de usuarios afectados ante un error es menor. Técnicamente se pueden usar para pruebas A/B, pero en la práctica no aportan suficiente valor debido a que es difícil asociar la funcionalidad ofrecida en el código del servidor canario con una mejor respuesta de los usuarios."
+        },
+        {
+            "question": "¿Cuánto tiempo conviven dos versiones en un despliegue incremental?",
+            "options": [
+              "A. Desde que se despliega el primer servidor con la nueva versión hasta que se apaga el último de la versión antigua.",
+              "B. No conviven ambas versiones, ya que se modifica el enrutador de tráfico instantáneamente para que apunte a la versión nueva o a la antigua.",
+              "C. Desde que se despliega el servidor canario hasta que se sustituyen todos los demás servidores.",
+              "D. Ninguna de las anteriores."
+            ],
+            "correct": "A. Desde que se despliega el primer servidor con la nueva versión hasta que se apaga el último de la versión antigua.",
+            "description": "La convivencia de ambas versiones es fundamental en un despliegue incremental, ya que se actualizan los servidores de forma gradual, manteniendo ambas versiones activas durante el proceso."
+        },
+        {
+            "question": "¿Qué significa que los despliegues y la oferta de funcionalidades deba desacoplarse?",
+            "options": [
+              "A. Que hay que desplegar las versiones cuando se decida ofrecer una funcionalidad concreta.",
+              "B. Que la fecha de un despliegue no tiene por qué coincidir con la exposición de una nueva funcionalidad a los usuarios.",
+              "C. Que un despliegue debe estar disponible para todos los usuarios exactamente al mismo tiempo.",
+              "D. Que los despliegues deben estar controlados por configuraciones definidas en una feature flag."
+            ],
+            "correct": "B. Que la fecha de un despliegue no tiene por qué coincidir con la exposición de una nueva funcionalidad a los usuarios.",
+            "description": "Este paradigma no se ha extendido si no hasta hace relativamente pocos años, ya que era habitual acoplar las nuevas características a despliegues masivos de nuevas versiones."
+        },
+        {
+            "question": "¿Qué usos se le puede dar a una feature flag?",
+            "options": [
+              "A. Desplegar funcionalidades de manera incremental a nivel de usuario.",
+              "B. Bloquear funcionalidades secundarias de manera global.",
+              "C. Experimentar con usuarios reales en producción.",
+              "D. Todas las anteriores."
+            ],
+            "correct": "D. Todas las anteriores.",
+            "description": "Las feature flags tienen el significado que le quieran dar los desarrolladores, por lo que se pueden usar para aquello que consideren necesario."
+        },
+        {
+            "question": "¿Cómo detecta Kubernetes si un pod ha arrancado correctamente?",
+            "options": [
+              "A. Si hay suficientes ejecuciones exitosas consecutivas de la sonda readinessProbe.",
+              "B. Una vez desplegado un contenedor, Kubernetes lo considera disponible automáticamente.",
+              "C. Si el proceso no termina automáticamente tras initialDelaySeconds segundos.",
+              "D. Ninguna de las anteriores."
+            ],
+            "correct": "A. Si hay suficientes ejecuciones exitosas consecutivas de la sonda readinessProbe.",
+            "description": "En caso contrario, Kubernetes no sigue con el despliegue."
+        },
+        {
+            "type": "matching",
+            "question": "Relaciona el concepto con su característica principal.",
+            "pairs": [
+              {
+                "term": "Blue/green",
+                "definition": "Despliega dos entornos idénticos, uno para cada versión."
+              },
+              {
+                "term": "Actualización incremental",
+                "definition": "Se sustituyen servidores poco a poco, siempre y cuando los nuevos funcionen correctamente."
+              },
+              {
+                "term": "Canary releasing",
+                "definition": "Un porcentaje pequeño de servidores ofrece la versión nueva."
+              },
+              {
+                "term": "Feature flag",
+                "definition": "Todos los servidores tienen el mismo código, pero una funcionalidad se puede ofrecer o no dependiendo de los detalles del usuario, la sesión, la configuración, etc."
+              }
+            ]
+        }        
+    ]
+}

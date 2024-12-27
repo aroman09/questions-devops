@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Estudio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .hidden {
+            display: none;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .option:hover {
+            background-color: #f0f8ff;
+        }
+        .option.correct {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+        .option.incorrect {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+        .answer-description {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #555;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .matching-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .matching-row span {
+            width: 40%;
+        }
+        .matching-row select {
+            width: 55%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz de Estudio</h1>
+        <h2>Selecciona una materia</h2>
+
+        <select id="subjectSelect">
+            <option value="">-- Selecciona una materia --</option>
+        </select>
+        <button class="button" id="startQuizButton">Iniciar Quiz</button>
+
+        <div id="quizContainer" class="hidden">
+            <div id="questionContainer" class="question"></div>
+            <div id="optionsContainer"></div>
+            <div id="descriptionContainer" class="answer-description hidden"></div>
+            <button class="button" id="nextButton" disabled>Siguiente Pregunta</button>
+        </div>
+
+        <div id="matchingContainer" class="hidden">
+            <div id="matchingQuestion"></div>
+            <div id="matchingPairs"></div>
+            <button class="button" id="nextMatchingButton" disabled>Siguiente Pregunta</button>
+        </div>
+
+    </div>
+
+    <script>
+        const subjectSelect = document.getElementById('subjectSelect');
+        const startQuizButton = document.getElementById('startQuizButton');
+        const quizContainer = document.getElementById('quizContainer');
+        const questionContainer = document.getElementById('questionContainer');
+        const optionsContainer = document.getElementById('optionsContainer');
+        const descriptionContainer = document.getElementById('descriptionContainer');
+        const nextButton = document.getElementById('nextButton');
+
+        const matchingContainer = document.getElementById('matchingContainer');
+        const matchingQuestion = document.getElementById('matchingQuestion');
+        const matchingPairs = document.getElementById('matchingPairs');
+        const nextMatchingButton = document.getElementById('nextMatchingButton');
+
+        let currentSubject = "";
+        let currentQuestions = [];
+        let currentIndex = 0;
+        let remainingSubjects = [];
+
+        // Llenar materias en el select
+        const subjects = ["contenedores", "cicd", "gestion"];
+
+        subjects.forEach(subject => {
+            const option = document.createElement('option');
+            option.value = subject;
+            option.textContent = subject.replace('_', ' ').toUpperCase();
+            subjectSelect.appendChild(option);
+        });
+
+        // Iniciar el quiz
+        startQuizButton.addEventListener('click', () => {
+            currentSubject = subjectSelect.value;
+            if (currentSubject) {
+                fetch(`${currentSubject}.json`)
+                    .then(response => response.json())
+                    .then(jsonData => {
+                        currentQuestions = shuffleArray([...jsonData.questions]);
+                        currentIndex = 0;
+                        showQuestion();
+                        quizContainer.classList.remove('hidden');
+                        matchingContainer.classList.add('hidden');
+                    })
+                    .catch(error => console.error('Error al cargar las preguntas:', error));
+            } else {
+                alert('Por favor selecciona una materia.');
+            }
+        });
+
+        // Mostrar una pregunta
+        function showQuestion() {
+            const questionData = currentQuestions[currentIndex];
+
+            if (questionData.type === 'matching') {
+                showMatchingQuestion(questionData);
+            } else {
+                quizContainer.classList.remove('hidden');
+                matchingContainer.classList.add('hidden');
+
+                questionContainer.textContent = questionData.question;
+                optionsContainer.innerHTML = '';
+                descriptionContainer.classList.add('hidden');
+                nextButton.disabled = true;
+
+                questionData.options.forEach(option => {
+                    const optionElement = document.createElement('div');
+                    optionElement.textContent = option;
+                    optionElement.classList.add('option');
+                    optionElement.onclick = () => checkAnswer(optionElement, option, questionData.correct, questionData.description);
+                    optionsContainer.appendChild(optionElement);
+                });
+            }
+        }
+
+        // Mostrar una pregunta de relación
+        function showMatchingQuestion(data) {
+            matchingContainer.classList.remove('hidden');
+            quizContainer.classList.add('hidden');
+            matchingQuestion.textContent = data.question;
+            matchingPairs.innerHTML = '';
+            nextMatchingButton.disabled = true;
+
+            data.pairs.forEach(pair => {
+                const row = document.createElement('div');
+                row.classList.add('matching-row');
+
+                const term = document.createElement('span');
+                term.textContent = pair.term;
+
+                const select = document.createElement('select');
+                const defaultOption = document.createElement('option');
+                defaultOption.textContent = '-- Seleccione --';
+                defaultOption.value = '';
+                select.appendChild(defaultOption);
+
+                data.pairs.forEach(optionPair => {
+                    const option = document.createElement('option');
+                    option.value = optionPair.definition;
+                    option.textContent = optionPair.definition;
+                    select.appendChild(option);
+                });
+
+                row.appendChild(term);
+                row.appendChild(select);
+                matchingPairs.appendChild(row);
+
+                select.addEventListener('change', () => {
+                    validateMatchingAnswers(data);
+                });
+            });
+        }
+
+        // Validar las respuestas de relación
+        function validateMatchingAnswers(data) {
+            const rows = matchingPairs.querySelectorAll('.matching-row');
+            let allCorrect = true;
+
+            rows.forEach((row, index) => {
+                const select = row.querySelector('select');
+                const selectedValue = select.value;
+
+                if (selectedValue === data.pairs[index].definition) {
+                    select.style.borderColor = 'green';
+                } else {
+                    select.style.borderColor = 'red';
+                    allCorrect = false;
+                }
+            });
+
+            if (allCorrect) {
+                nextMatchingButton.disabled = false;
+            } else {
+                nextMatchingButton.disabled = true;
+            }
+        }
+
+        // Pasar a la siguiente pregunta o materia
+        nextMatchingButton.addEventListener('click', () => {
+            currentIndex++;
+            if (currentIndex < currentQuestions.length) {
+                showQuestion();
+            } else {
+                nextSubjectOrEnd();
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex++;
+            if (currentIndex < currentQuestions.length) {
+                showQuestion();
+            } else {
+                nextSubjectOrEnd();
+            }
+        });
+
+        // Pasar a la siguiente materia o terminar
+        function nextSubjectOrEnd() {
+            if (remainingSubjects.length > 0) {
+                currentSubject = remainingSubjects.shift();
+                fetch(`${currentSubject}.json`)
+                    .then(response => response.json())
+                    .then(jsonData => {
+                        currentQuestions = shuffleArray([...jsonData.questions]);
+                        currentIndex = 0;
+                        showQuestion();
+                    })
+                    .catch(error => console.error('Error al cargar las preguntas:', error));
+            } else {
+                alert('¡Has completado todas las materias!');
+                quizContainer.classList.add('hidden');
+                matchingContainer.classList.add('hidden');
+            }
+        }
+
+        // Verificar la respuesta
+        function checkAnswer(optionElement, selectedAnswer, correctAnswer, description) {
+            const isCorrect = selectedAnswer === correctAnswer;
+            optionElement.classList.add(isCorrect ? 'correct' : 'incorrect');
+
+            // Desactivar otras opciones
+            Array.from(optionsContainer.children).forEach(child => {
+                child.onclick = null;
+                if (child.textContent === correctAnswer) {
+                    child.classList.add('correct');
+                } else if (!child.classList.contains('correct') && !child.classList.contains('incorrect')) {
+                    child.classList.add('disabled');
+                }
+            });
+
+            // Mostrar descripción
+            descriptionContainer.textContent = description || "";
+            descriptionContainer.classList.remove('hidden');
+
+            nextButton.disabled = false;
+        }
+
+        // Función para barajar preguntas
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+    </script>
+</body>
+</html>
