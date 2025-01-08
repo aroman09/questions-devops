@@ -305,7 +305,7 @@
               "El origen es fork/repo:new-feature y el destino es repo:new-feature.",
               "El origen es repo:new-feature y el destino es fork/repo:master."
             ],
-            "correct": "El origen es fork/repo:new-feature y el destino es repo:master.",
+            "correct": "El origen es fork/repo:new-feature y el destino es repo:new-feature.",
             "description": "La rama de trabajo existe en el fork, no en el repositorio principal. El destino es la rama principal del repositorio original."
         },
         {
